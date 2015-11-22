@@ -24,26 +24,18 @@ public class MainActivity extends Activity {
             int level = intent.getIntExtra("level", 0);
             contentTxt.setText(String.valueOf(level) + "%");
 
-
-
             if (level<2) {
-
-
-
                 TimerTask endtimer = new TimerTask() {
                     @Override
                     public void run() {
-                        Toast.makeText(loseText, "You Lost!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(loseText, "Time Up, You Lose!", Toast.LENGTH_LONG).show();
                     }
                 };
 
                 Timer timerObject = new Timer();
-                timerObject.schedule(endtimer, 7000);
-
-
-
+                timerObject.schedule(endtimer, 10000);
+                
                 }
-
             };
     };
 
@@ -55,14 +47,17 @@ public class MainActivity extends Activity {
         this.registerReceiver(this.mBatInfoReceiver,
                 new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }
-    //public boolean isCharging(){
-
-//}
-
-
+    /* TODO: Use this API (which returns a boolian) for shutting off the timer.
+    public boolean isCharging(){
+        
+    }
+        if( (level<2) && (isCharging() = true) ){
+            code to stop the timer
+            System.out.println("The Timer is off")
+        }
+    */
 }
-
-
+//we like pie
 
 
 //hi people
