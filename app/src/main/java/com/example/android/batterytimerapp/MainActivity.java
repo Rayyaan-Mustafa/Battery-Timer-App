@@ -26,19 +26,19 @@ public class MainActivity extends Activity {
 
 
 
-            if (level<35) {
+            if (level<2) {
 
 
 
                 TimerTask endtimer = new TimerTask() {
                     @Override
                     public void run() {
-                        Toast.makeText(loseText, "You Lost!", Toast.LENGTH_LONG);
+                        Toast.makeText(loseText, "You Lost!", Toast.LENGTH_LONG).show();
                     }
                 };
 
                 Timer timerObject = new Timer();
-                timerObject.schedule(endtimer, 2000);
+                timerObject.schedule(endtimer, 7000);
 
 
 
