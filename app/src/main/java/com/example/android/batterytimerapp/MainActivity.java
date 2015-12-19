@@ -47,17 +47,15 @@ public class MainActivity extends Activity {
         this.registerReceiver(this.mBatInfoReceiver,
                 new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }
-    /* TODO: Use this API (which returns a boolian) for shutting off the timer.
+    // TODO: Use this API (which returns a boolian) for shutting off the timer *MORE WORK ON THIS*.
     public boolean isCharging(){
-        
     }
         if( (level<2) && (isCharging() = true) ){
-            code to stop the timer
-            System.out.println("The Timer is off")
+            //Code for timer ender :P
+            System.out.println("The Timer is now off")
         }
-    */
+    
 }
 //we like pie
-
 
 //hi people
